@@ -1,6 +1,6 @@
 from ortools.linear_solver import pywraplp
 
-MAX_CUSTO = 100000
+MAX_CUSTO = 250000
 MAX_MANUTENCAO = 50000
 MAX_VEICULOS = 8
 
