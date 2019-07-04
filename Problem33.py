@@ -30,7 +30,7 @@ p.Add(x[5]+x[6]>=1)
 p.Add(x[7]+x[8]+x[9]>=1)
 p.Add(p.Sum([x[i]*cRestok[i] for i in range(10)])<=MAX_CUSTO_RESTOK)
 
-p.Minimize(p.Sum([x[i]*liquidation[i] for i in range(10)]))
+p.Minimize(p.Sum([x[i]*(cRestok[i]-liquidation[i]) for i in range(10)]))
 
 p.Solve()
 
