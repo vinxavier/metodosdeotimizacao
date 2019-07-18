@@ -1,7 +1,7 @@
 from random import randint
 from copy import copy
 
-n = 20
+n = 120
 r= 5
 W=[]
 P=[]
@@ -10,25 +10,6 @@ M=0
 OptP = 0
 OptX = []
 
-def Knapsack1(l, X):
-    global OptP, OptX,W,P,M
-    if l==n:
-        currentWeigth = 0
-        for i in range(n):
-            currentWeigth += X[i]*W[i]
-        
-        if currentWeigth <= M:
-            CurP = 0
-            for i in range(n):
-                CurP += P[i]*X[i]
-            if CurP > OptP:
-                OptP = CurP
-                OptX = copy(X)
-    else:
-        X[l] = 1
-        Knapsack1(l+1, X)
-        X[l] = 0
-        Knapsack1(l+1, X)
         
 def Knapsack2(l, CurW, X):
     global OptP, OptX,W,P,M
@@ -45,9 +26,6 @@ def Knapsack2(l, CurW, X):
             Knapsack2(l+1, CurW+W[l], X)
         X[l] = 0
         Knapsack2(l+1, CurW, X)
-        
-def Knapsack3(l,CurW,X):
-    print("nothig")
     
         
 def knapsack_uncorrelated(n,r):
@@ -79,7 +57,7 @@ def knapsack_strongly_correlated(n,r):
 
    
    
-W,P,M = knapsack_strongly_correlated(n, r)
+W,P,M = knapsack_uncorrelated(n, r)
 
 def generateX():
     X=[]

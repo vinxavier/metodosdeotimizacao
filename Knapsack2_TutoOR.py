@@ -2,7 +2,7 @@ from random import randint
 from copy import copy
 from urllib.request import urlopen
 
-numero_instancia = 8 # pode ser de 1 a 8
+numero_instancia = 7 # pode ser de 1 a 8
 
 url_base = "http://people.sc.fsu.edu/~jburkardt%20/datasets/knapsack_01"
 with urlopen("{}/p0{}_w.txt".format(url_base, numero_instancia)) as arquivo:
