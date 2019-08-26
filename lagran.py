@@ -119,7 +119,7 @@ while(pi>EPSON):
     zeros = []
     if curZlb>Zlb:
         Zlb = curZlb        
-        print("New Low bound: ", Zlb)
+        print("New Lower bound: ", Zlb)
         
     
     for i in range(m):
